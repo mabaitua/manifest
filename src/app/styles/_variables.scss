@@ -1,0 +1,80 @@
+@import './colors';
+
+// Space
+$space-0: 0;
+$space-50: 0.25rem;
+$space-100: 0.5rem;
+$space-200: 1rem;
+$space-300: 1.5rem;
+$space-400: 2rem;
+$space-500: 2.5rem;
+$space-600: 3rem;
+$space-700: 3.5rem;
+$space-800: 4rem;
+$space-900: 4.5rem;
+$space-1000: 5rem;
+$space-1200: 6rem;
+$space-1600: 8rem;
+$space-2000: 10rem;
+$space-2400: 12rem;
+
+
+// Size
+$size-0: 0;
+$size-50: 0.25rem;
+$size-100: 0.5rem;
+$size-200: 1rem;
+$size-300: 1.5rem;
+$size-400: 2rem;
+$size-500: 2.5rem;
+$size-600: 3rem;
+$size-700: 3.5rem;
+$size-800: 4rem;
+$size-900: 4.5rem;
+$size-1000: 5rem;
+$size-1200: 6rem;
+$size-1600: 8rem;
+$size-2000: 10rem;
+$size-2400: 12rem; 
+
+// Border radius
+$border-radius-0: 0;
+$border-radius-50: 0.25rem;
+$border-radius-100: 0.5rem;
+$border-radius-200: 1rem;
+$border-radius-300: 1.5rem;
+$border-radius-400: 2rem;
+$border-radius-800: 4rem;
+$border-radius-full: 120rem;
+
+// Border width
+$border-width-0: 0;
+$border-width-50: 0.03125rem;
+$border-width-100:  0.06325rem;
+$border-width-200: 0.125rem;
+$border-width-300: 0.1875rem;
+$border-width-400: 0.25rem;
+
+// Opacity
+$opacity-0: 0;
+$opacity-5: 5%;
+$opacity-10: 10%;
+$opacity-20: 20%;
+$opacity-30: 30%;
+$opacity-40: 40%;
+$opacity-50: 50%;
+$opacity-60: 60%;
+$opacity-70: 70%;
+$opacity-80: 80%;
+$opacity-90: 90%;
+$opacity-95: 95%;
+$opacity-100: 100%;
+
+//Elevations
+$elevation-1: (
+    "50": 0px 4px 8px 0px map-get($neutral,"transparent-black-5"),
+    "100": 0px 8px 24px 0px map-get($neutral,"transparent-black-5"),
+    "200": 0px 16px 40px 0px map-get($neutral,"transparent-black-5"),
+    "300": 0px 24px 56px 0px map-get($neutral,"transparent-black-5"),
+    "400": 0px 32px 72px 0px map-get($neutral,"transparent-black-5"),
+);
