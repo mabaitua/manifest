@@ -1,0 +1,9 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+@import '../../../../styles/variables';
+
+.chip--s{
+    padding: $space-50 $space-100;
+    font-size: map-get($font-size-desktop, "2");
+    line-height: 16px;
+}

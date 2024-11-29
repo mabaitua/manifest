@@ -78,6 +78,17 @@ h3{
     }
 }
 
+// Chip
+.chip{
+    background-color: map-get($neutral, "gray-50");
+    color: map-get($neutral,"black");
+    border-radius: $border-radius-full;
+    font-weight: map-get($font-weight,"400");
+    opacity: $opacity-100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
 // Móvil
 @media (max-width: 576px){
