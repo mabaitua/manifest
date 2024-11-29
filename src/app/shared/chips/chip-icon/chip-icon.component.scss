@@ -1,0 +1,17 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+@import '../../../../styles/variables';
+
+.chip--icon{
+    padding: $space-50;
+    width: Hug (58px)px;    
+    font-size: map-get($font-size-desktop, "2");
+    line-height: 16px;
+    width: $size-400;
+    height: $size-400;
+    padding: $space-50;
+    svg{
+        width: 1.25rem;
+        fill: map-get($amethyst, "400");
+    }
+}
