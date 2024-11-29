@@ -15,6 +15,31 @@
             gap: $space-200; 
             width: 660px;
         }
+        .container__grid__3row{
+            display: grid;
+            grid-template-rows: repeat(3, auto); 
+            gap: $space-300; 
+            .container__grid__column, .container__grid__2column, .container__grid__3column{
+                height: 288px;
+                display: grid;
+                gap: $space-300;
+            }
+            .container__grid__column{
+                width: 100%;
+            }
+            .container__grid__2column{
+                grid-template-columns: repeat(2, 1fr); 
+            }
+            .container__grid__3column{
+                grid-template-columns: repeat(3, 1fr); 
+            }
+            img{
+                object-fit: cover;
+                width: 100%;
+                border-radius: $border-radius-200;
+                height: 288px;
+            }
+        }
         .container__grid__cards{
             display: grid;
             grid-template-columns: repeat(4, 1fr); 
@@ -33,6 +58,23 @@
             margin: $space-800 auto;
             .container__grid__text{
                 width: 100%;
+            }
+            .container__grid__3row{
+                gap: 0;
+                display: block;
+                .container__grid__column, .container__grid__2column, .container__grid__3column{
+                    height: 288px;
+                    display: grid;
+                }
+                .container__grid__2column{
+                    width: 100%;
+                    grid-template-columns: repeat(1, 1fr);
+                    height: 100%;
+                    margin-top: $space-300;
+                }
+                .container__grid__3column{
+                    display: none;
+                }
             }
             .container__grid__cards{
                 grid-template-columns: repeat(1, 1fr); 
