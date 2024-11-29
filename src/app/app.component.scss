@@ -1,0 +1,44 @@
+@import '../styles/colors';
+@import '../styles/variables';
+
+.container{
+    .container__grid{
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: $space-400;
+        margin: $size-1000 auto;
+        .container__grid__text{
+            display: grid;
+            gap: $space-200; 
+            width: 660px;
+        }
+        .container__grid__cards{
+            display: grid;
+            grid-template-columns: repeat(4, 1fr); 
+            grid-template-rows: repeat(2, auto); 
+            gap: $space-200; 
+        }
+    }
+}
+
+// Móvil
+@media (max-width: 576px){
+    .container{
+        padding: $space-300;;
+        .container__grid{
+            gap: $space-400;
+            margin: $space-800 auto;
+            .container__grid__text{
+                width: 100%;
+            }
+            .container__grid__cards{
+                grid-template-columns: repeat(1, 1fr); 
+                grid-template-rows: repeat(1, auto); 
+                gap: $space-300; 
+            }
+        }
+    }
+}
