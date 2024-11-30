@@ -4,10 +4,16 @@
 
 //Desktop
 .container{
-    display: grid;
-    grid-template-columns: repeat(2, 1fr); 
+    // display: grid;
+    // grid-template-columns: repeat(2, 1fr); 
+    display: flex;
+    justify-content: end;
     height: 411.44px;
+    margin-left: 18rem;
+
     .container__imgRight{
+        width: 100%;
+        max-width: 960px;
         img{
             width: 100%;
             height: 411.44px;
@@ -17,13 +23,13 @@
     .container__textLeft{
         display: flex;
         align-items: center;
+        width: 546px;
+        padding-right: $space-1600;
         .container__textLeft__content{
-            width: auto;
             display: flex;
             flex-direction: column;
             justify-content: center;
             gap: $space-400;
-            margin-left: $space-2400;
         }
     }
 }
