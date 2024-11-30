@@ -2,35 +2,33 @@
 @import '../styles/variables';
 
 .container{
-    .container__grid{
-        width: 100%;
+    width: 100%;
+    margin: 0 auto;
+    .container__layout{
         display: flex;
         justify-content: center;
         align-items: center;
         flex-direction: column;
         gap: $space-400;
-        margin: $size-1000 auto;
-        .container__grid__text{
+        margin: $size-1000 $space-2400;
+        .container__layout__text{
             display: grid;
             gap: $space-200; 
-            width: 660px;
+            max-width: 660px;
         }
-        .container__grid__3row{
+        .container__layout__3row{
             display: grid;
             grid-template-rows: repeat(3, auto); 
             gap: $space-300; 
-            .container__grid__column, .container__grid__2column, .container__grid__3column{
+            .container__layout__column, .container__layout__2column, .container__layout__3column{
                 height: 288px;
                 display: grid;
                 gap: $space-300;
             }
-            .container__grid__column{
-                width: 100%;
-            }
-            .container__grid__2column{
+            .container__layout__2column{
                 grid-template-columns: repeat(2, 1fr); 
             }
-            .container__grid__3column{
+            .container__layout__3column{
                 grid-template-columns: repeat(3, 1fr); 
             }
             img{
@@ -40,7 +38,7 @@
                 height: 288px;
             }
         }
-        .container__grid__cards{
+        .container__layout__cards{
             display: grid;
             grid-template-columns: repeat(4, 1fr); 
             grid-template-rows: repeat(2, auto); 
@@ -49,34 +47,69 @@
     }
 }
 
+@media (max-width: 1400px){
+    .container{
+        .container__layout{
+            margin: $size-1000;
+            .container__layout__cards{
+                grid-template-columns: repeat(3, 1fr); 
+                grid-template-rows: repeat(3, auto); 
+            }
+        }
+    }
+}
+
+@media (max-width: 992px){
+    .container{
+        .container__layout{
+            .container__layout__text{
+                max-width: 100%;
+            }
+            .container__layout__cards{
+                grid-template-columns: repeat(2, 1fr); 
+                grid-template-rows: repeat(3, auto); 
+            }
+        }
+    }
+}
+
+@media (max-width: 768px){
+    .container{
+        .container__layout{
+            margin: $space-800 $space-400;
+        }
+    }
+}
+
 // Móvil
 @media (max-width: 576px){
     .container{
+        width: auto;
         padding: $space-300;;
-        .container__grid{
+        .container__layout{
             gap: $space-400;
             margin: $space-800 auto;
-            .container__grid__text{
+            .container__layout__text{
                 width: 100%;
             }
-            .container__grid__3row{
+            .container__layout__3row{
                 gap: 0;
                 display: block;
-                .container__grid__column, .container__grid__2column, .container__grid__3column{
+                .container__layout__column, .container__layout__2column, .container__layout__3column{
                     height: 288px;
                     display: grid;
                 }
-                .container__grid__2column{
+                .container__layout__2column{
                     width: 100%;
                     grid-template-columns: repeat(1, 1fr);
                     height: 100%;
                     margin-top: $space-300;
                 }
-                .container__grid__3column{
+                .container__layout__3column{
                     display: none;
                 }
             }
-            .container__grid__cards{
+            .container__layout__cards{
                 grid-template-columns: repeat(1, 1fr); 
                 grid-template-rows: repeat(1, auto); 
                 gap: $space-300; 

@@ -1,19 +1,19 @@
 <!-- <app-button-lg class="c-button c-button--lg">hola esto es una prueba</app-button-lg> -->
 <div class="container">
-    <div class="container__grid">
-        <div class="container__grid__text">
+    <div class="container__layout">
+        <div class="container__layout__text">
             <h2 class="text--center">Los mejores destinos </h2>
             <p class="text--center">Explora los mejores destinos del mundo, desde las playas paradisíacas de Maldivas hasta las montañas majestuosas de los Alpes. Cada lugar ofrece una experiencia única.</p>
         </div>
-        <div class="container__grid__3row">
-            <div class="container__grid__column">
+        <div class="container__layout__3row">
+            <div class="container__layout__column">
                 <img src="assets/img/mosaico-1.png" alt="imagen mosaico 1">
             </div>
-            <div class="container__grid__2column">
+            <div class="container__layout__2column">
                 <img src="assets/img/mosaico-2.png" alt="imagen mosaico 2">
                 <img src="assets/img/mosaico-3.png" alt="imagen mosaico 3">
             </div>
-            <div class="container__grid__3column">
+            <div class="container__layout__3column">
                 <img src="assets/img/mosaico-4.png" alt="imagen mosaico 4">
                 <img src="assets/img/mosaico-5.png" alt="imagen mosaico 5">
                 <img src="assets/img/mosaico-6.png" alt="imagen mosaico 6">
@@ -21,14 +21,18 @@
         </div>
     </div>
     
-    <div class="container__full"></div>
+    <div class="container__full">
+        <div class="container__full__imgLeft">
+            
+        </div>
+    </div>
     
-    <div class="container__grid">
-        <div class="container__grid__text">
+    <div class="container__layout">
+        <div class="container__layout__text">
             <h2 class="text--center">Lorem ipsum dolor sit</h2>
             <p class="text--center">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
         </div>
-        <div class="container__grid__cards">
+        <div class="container__layout__cards">
             <app-card [imgUrl]="img1"></app-card>
             <app-card [imgUrl]="img2"></app-card>
             <app-card [imgUrl]="img3"></app-card>

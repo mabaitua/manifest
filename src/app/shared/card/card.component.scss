@@ -7,7 +7,6 @@
 .card{
     background-color: map-get($neutral,"white");
     box-shadow: 0px 10px 40px 0px #0000001A;
-    max-width: 318px;
     .card__imgHolder{
         position: relative;
         width: 100%;
@@ -48,7 +47,7 @@
                 display: grid;
                 grid-template-columns: repeat(2, 1fr); 
                 width: 100%;
-                height: $size-500;
+                height: 100%;
                 gap: $space-200;
                 button{
                     width: 100%;
@@ -56,6 +55,21 @@
             }
         }
    }
+}
+
+@media (max-width: 1400px){
+    .card{
+        .card__imgHolder{
+            height: 200px;
+        }
+       .card__content{
+            .card__content__description{
+                .card__content__buttons{
+                    display: flex;
+                }
+            }
+       }
+    }
 }
 
 // Móvil

@@ -7,7 +7,7 @@
     background-color: map-get($neutral, "gray-50");
     color: map-get($neutral,"black");
     font-family: $manifestfontfamilyopen-sans;
-    text-align: left;
+    text-align: center;
     text-underline-position: from-font;
     text-decoration-skip-ink: none;
     font-size: map-get($font-size-desktop, "4" );
@@ -20,6 +20,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    cursor: pointer;
 }
 .c-button--sm{
     padding: $size-100 $size-200;
