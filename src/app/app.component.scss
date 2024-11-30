@@ -5,12 +5,7 @@
 .container{
     width: 100%;
     margin: 0 auto;
-    .container__full__left{
-        margin-right: $space-2400;
-    }
-    .container__full__right{
-        margin-left: $space-2400;
-    }
+
     .container__layout{
         display: flex;
         justify-content: center;
