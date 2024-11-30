@@ -1,7 +1,7 @@
 <article class="card">
     <section class="card__imgHolder">
         <app-chip-icon class="card__imgHolder__chip"></app-chip-icon>
-        <img src="assets/img/card-1.png" class="card__imgHolder__img" alt="imagen card">
+        <img [src]="imgUrl" class="card__imgHolder__img" alt="imagen card">
     </section>
     <section class="card__content">
         <div class="card__content__description">
@@ -18,8 +18,8 @@
                 <h3>2.031€</h3>
             </div>
             <div class="card__content__buttons">
-                <app-button-md class="c-button c-button--sm"></app-button-md>
-                <app-button-md class="c-button c-button--primary c-button--sm"></app-button-md>
+                <app-button-md [cssClassName]="'c-button c-button--sm'" ></app-button-md>
+                <app-button-md [cssClassName]="'c-button c-button--primary c-button--sm'" ></app-button-md>
             </div>
         </div>
     </section>

@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 import { ButtonMdComponent } from "../buttons/button-md/button-md.component";
 import { ChipSComponent } from "../chips/chip-s/chip-s.component";
 import { ChipIconComponent } from "../chips/chip-icon/chip-icon.component";
@@ -11,5 +11,5 @@ import { ChipIconComponent } from "../chips/chip-icon/chip-icon.component";
   styleUrl: './card.component.scss'
 })
 export class CardComponent {
-
+  @Input() imgUrl: string="";
 }

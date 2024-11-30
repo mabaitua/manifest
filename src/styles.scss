@@ -47,36 +47,7 @@ h3{
 .text--bold{
     font-weight: map-get($font-weight,"800");
 }
-// Botones
-.c-button{
-    background-color: map-get($neutral, "gray-50");
-    color: map-get($neutral,"black");
-    font-family: $manifestfontfamilyopen-sans;
-    text-align: left;
-    text-underline-position: from-font;
-    text-decoration-skip-ink: none;
-    font-size: map-get($font-size-desktop, "4" );
-    font-weight: map-get($font-weight,"400");
-    line-height: 24px;
-    opacity: $opacity-100;
-    box-shadow: none;
-    border-width: $border-width-0;
-    border-radius: $border-radius-100;
-    display: flex;
-    align-items: center;
-    justify-content: center;
 
-    &.c-button--primary{
-        background-color: map-get($amethyst, "400");
-        color: map-get($neutral,"white");
-    }
-    &.c-button--lg{
-        padding: $size-200;
-    }
-    &.c-button--sm{
-        padding: $size-100 $size-200;
-    }
-}
 
 // Chip
 .chip{
