@@ -1,0 +1,26 @@
+@import '../../../../styles/colors';
+@import '../../../../styles/typography';
+@import '../../../../styles/variables';
+
+//Desktop
+.container{
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); 
+    .container__imgLeft{
+        object-fit: cover;
+        img{
+            width: 100%;
+            height: 411.44px;
+        }
+    }
+    .container__textRight{
+        display: flex;
+        justify-content: end;
+        align-items: center;
+        .container__textRight__content{
+            width: 546px;
+            display: grid;
+            gap: $space-400;
+        }
+    }
+}
