@@ -6,6 +6,9 @@ nav{
     display: flex;
     align-items: center;
     height: 100%;
+    .c-buttton-menu{
+        display: none;
+    }
     ul{
         display: flex;
         gap: $space-300;
@@ -17,6 +20,14 @@ nav{
                 text-decoration: none;
                 font-weight: map-get($font-weight,"600");
             }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    nav{
+        .c-buttton-menu{
+            display: block;
         }
     }
 }

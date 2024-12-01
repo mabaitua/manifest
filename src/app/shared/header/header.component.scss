@@ -3,11 +3,32 @@
 @import '../../../styles/variables';
 
 header{
-    background-color: red;
+    padding: 0 18rem;
     display: flex;
     justify-content: space-between;
-    margin: $size-1000 18rem;
     img{
         height: $size-600;
+    }
+}
+
+@media (max-width: 1400px) {
+    header{
+        padding: 0 $size-1000;
+    }
+}
+
+@media (max-width: 768px) {
+    header{
+        padding: 0 $size-400;
+    }
+}
+
+// Móvil
+@media (max-width: 576px) {
+    header{
+        padding: 0 $size-300;
+        img{
+            height: $size-300;
+        }
     }
 }

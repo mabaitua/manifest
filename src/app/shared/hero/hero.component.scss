@@ -1,0 +1,119 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+@import '../../../styles/variables';
+
+section{
+    height: 768px;
+    background: url("../../../assets/img/hero.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: 50%;
+    position: relative;
+    .container{
+        background-color: map-get($neutral,"transparent-black-50");
+        height: 100%;
+        width: 100%;
+        .container__header{
+            left: 0;
+            right: 0;
+            position: absolute;
+            top: $space-500;
+        }
+        .container__info{
+            left: 0;
+            right: 0;
+            position: absolute;
+            bottom: $space-500;
+            padding: 0 18rem $space-2000 18rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: $space-400;
+            .text--display{
+                font-size: map-get($font-size-desktop,"10");
+                font-weight: map-get($font-weight,"700");
+                line-height: map-get($line-height,"120");
+            }
+            hr{
+                width: 100%;
+            }
+            h1{
+                font-size: map-get($font-size-desktop,"7");
+                font-weight: map-get($font-weight,"700");
+            }
+        }
+    }
+}
+
+@media (max-width: 1600px) {
+    section{
+        .container{
+            .container__info{
+                padding: 0 18rem $space-1600 18rem;
+                .text--display{
+                    font-size: map-get($font-size-desktop,"9");
+                }
+                h1{
+                    font-size: map-get($font-size-desktop,"6");
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    section{
+        .container{
+            .container__info{
+                padding: $size-1000;
+            }
+        }
+    }
+}
+
+@media (max-width: 1200px) {
+    section{
+        .container{
+            .container__info{
+                .text--display{
+                    font-size: map-get($font-size-desktop,"8");
+                }
+                h1{
+                    font-size: map-get($font-size-desktop,"5");
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    section{
+        height: 704px;
+        .container{
+            .container__info{
+                padding: 0 $size-400 $space-600 $size-400;
+                gap: $space-300;
+                .text--display{
+                    font-size: map-get($font-size-mobile,"9");
+                }
+                h1{
+                    font-size: map-get($font-size-mobile,"7");
+                    font-weight: map-get($font-weight,"400");
+                }
+            }
+        }
+    }
+}
+
+// Móvil
+@media (max-width: 576px) {
+    section{
+        height: 704px;
+        .container{
+            .container__info{
+                padding: 0 $size-300 $space-600 $size-300;
+            }
+        }
+    }
+}
+
