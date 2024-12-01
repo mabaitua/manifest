@@ -11,13 +11,16 @@
         align-items: center;
         flex-direction: column;
         gap: $space-400;
-        margin: $size-1000 18rem;
+        padding: $size-1000 18rem;
+        &.container__layout__gray{
+            background-color: map-get($layout,"layout");
+        }
         .container__layout__text{
             display: grid;
             gap: $space-200; 
             max-width: 660px;
         }
-        .container__layout__3row{
+        .container__layout__mosaic{
             display: grid;
             grid-template-rows: repeat(3, auto); 
             gap: $space-300; 
@@ -51,7 +54,7 @@
 @media (max-width: 1400px){
     .container{
         .container__layout{
-            margin: $size-1000;
+            padding: $size-1000;
             .container__layout__cards{
                 grid-template-columns: repeat(3, 1fr); 
                 grid-template-rows: repeat(3, auto); 
@@ -81,7 +84,7 @@
             gap: $space-400;
         }
         .container__layout{
-            margin: $space-800 $space-400;
+            padding: $space-800 $space-400;
         }
     }
 }
@@ -93,11 +96,11 @@
         padding: 0 $space-300;
         .container__layout{
             gap: $space-400;
-            margin: $space-800 auto;
+            padding: $space-800 auto;
             .container__layout__text{
                 width: 100%;
             }
-            .container__layout__3row{
+            .container__layout__mosaic{
                 gap: 0;
                 display: block;
                 .container__layout__column, .container__layout__2column, .container__layout__3column{
