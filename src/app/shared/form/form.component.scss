@@ -1,0 +1,65 @@
+
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+@import '../../../styles/variables';
+
+form{
+    width: 100%;
+    display: grid;
+    gap: $space-300;
+    .form-group{
+        display: flex;
+        flex-direction: column;
+        gap: $space-50;
+        .form-label{
+            color: map-get($neutral,"black");
+            font-size: map-get($font-size-desktop,"3");
+        }
+        .form-input, .form-textarea{
+            border-radius: $border-radius-50;
+            padding: $space-150;
+            border: 0;
+            box-shadow: 0;
+            background-color: #254E7E17;
+        }
+        .form-input{
+            min-height: $size-500;
+        }
+        .form-textarea{
+            min-height: $size-1000;
+        }
+        &.checkbox{
+            display: flex;
+            flex-direction: row;
+            input{
+                width: $size-250;
+                height: $size-250;
+                margin-right: $space-100;
+            }
+            a{
+                color: map-get($neutral,"black");
+            }
+        }
+    }
+    .container__2cols{
+        display: grid;
+        gap: $space-300;
+        grid-template-columns: repeat(2, 1fr); 
+    }
+    .container__spaceBetween{
+        display: flex;
+        justify-content: space-between;
+    }
+}
+
+@media (max-width: 1200px){
+    form{
+        .container__2cols{
+            grid-template-columns: repeat(1, 1fr); 
+        }
+        .container__spaceBetween{
+            flex-direction: column;
+            gap: $space-200;
+        }
+    }
+}

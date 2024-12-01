@@ -1,1 +1,31 @@
-<p>form works!</p>
+<form action="">
+    <div class="container__2cols">
+        <div class="form-group">
+            <label class="form-label" for="">Nombre</label>
+            <app-input class="form-input"></app-input>
+        </div>
+        <div class="form-group">
+            <label class="form-label" for="">Apellidos</label>
+            <app-input class="form-input"></app-input>
+        </div>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="">Email</label>
+        <app-input class="form-input"></app-input>
+    </div>
+
+    <div class="form-group">
+        <label class="form-label" for="">Mensaje</label>
+        <app-textarea class="form-textarea"></app-textarea>
+    </div>
+
+    <div class="container__spaceBetween">
+        <div class="form-group checkbox">
+            <input type="checkbox">
+            <p>Acepto los <a aria-label="Ir a los términos y condiciones" href="#">Terminos y condiciones</a></p>
+        </div>
+        <app-button-lg-icon></app-button-lg-icon>
+    </div>
+
+</form>

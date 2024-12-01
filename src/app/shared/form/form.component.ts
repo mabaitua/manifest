@@ -1,9 +1,12 @@
 import { Component } from '@angular/core';
+import { InputComponent } from "./input/input.component";
+import { TextareaComponent } from "./textarea/textarea.component";
+import { ButtonLgIconComponent } from "../buttons/button-lg-icon/button-lg-icon.component";
 
 @Component({
   selector: 'app-form',
   standalone: true,
-  imports: [],
+  imports: [InputComponent, TextareaComponent, ButtonLgIconComponent],
   templateUrl: './form.component.html',
   styleUrl: './form.component.scss'
 })
