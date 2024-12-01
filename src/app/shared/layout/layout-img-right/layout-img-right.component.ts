@@ -11,4 +11,5 @@ import { ButtonLgIconComponent } from "../../buttons/button-lg-icon/button-lg-ic
 })
 export class LayoutImgRightComponent {
   iconBeach='assets/img/icon-beach.svg';
+  buttonTextVermas: string = "Ver más";
 }

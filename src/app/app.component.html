@@ -1,71 +1,77 @@
-<app-hero></app-hero>
+@if(showMobileMenu){
+    <app-hero></app-hero>
 
-<div class="container">
-    <div class="container__layout">
-        <div class="container__layout__text">
-            <h2>Los mejores destinos </h2>
-            <p>Explora los mejores destinos del mundo, desde las playas paradisíacas de Maldivas hasta las montañas majestuosas de los Alpes. Cada lugar ofrece una experiencia única.</p>
+    <div class="container">
+        <div class="container__layout">
+            <div class="container__layout__text">
+                <h2>Los mejores destinos </h2>
+                <p>Explora los mejores destinos del mundo, desde las playas paradisíacas de Maldivas hasta las montañas majestuosas de los Alpes. Cada lugar ofrece una experiencia única.</p>
+            </div>
+            <div class="container__layout__mosaic">
+                <div class="container__layout__column">
+                    <img src="assets/img/mosaico-1.png" alt="imagen mosaico 1">
+                </div>
+                <div class="container__layout__2cols">
+                    <img src="assets/img/mosaico-2.png" alt="imagen mosaico 2">
+                    <img src="assets/img/mosaico-3.png" alt="imagen mosaico 3">
+                </div>
+                <div class="container__layout__3column">
+                    <img src="assets/img/mosaico-4.png" alt="imagen mosaico 4">
+                    <img src="assets/img/mosaico-5.png" alt="imagen mosaico 5">
+                    <img src="assets/img/mosaico-6.png" alt="imagen mosaico 6">
+                </div>
+            </div>
         </div>
-        <div class="container__layout__mosaic">
-            <div class="container__layout__column">
-                <img src="assets/img/mosaico-1.png" alt="imagen mosaico 1">
+    
+        <div class="container__full">
+            <app-layout-img-left></app-layout-img-left>
+            <app-layout-img-right></app-layout-img-right>
+        </div>
+        
+        <div class="container__layout">
+            <div class="container__layout__text">
+                <h2>Lorem ipsum dolor sit</h2>
+                <p>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
             </div>
-            <div class="container__layout__2cols">
-                <img src="assets/img/mosaico-2.png" alt="imagen mosaico 2">
-                <img src="assets/img/mosaico-3.png" alt="imagen mosaico 3">
-            </div>
-            <div class="container__layout__3column">
-                <img src="assets/img/mosaico-4.png" alt="imagen mosaico 4">
-                <img src="assets/img/mosaico-5.png" alt="imagen mosaico 5">
-                <img src="assets/img/mosaico-6.png" alt="imagen mosaico 6">
+            <div class="container__layout__cards">
+                <app-card [imgUrl]="img1"></app-card>
+                <app-card [imgUrl]="img2"></app-card>
+                <app-card [imgUrl]="img3"></app-card>
+                <app-card [imgUrl]="img4"></app-card>
+                <app-card [imgUrl]="img5"></app-card>
+                <app-card [imgUrl]="img6"></app-card>
+                <app-card [imgUrl]="img7"></app-card>
+                <app-card [imgUrl]="img8"></app-card>
             </div>
         </div>
-    </div>
-
-    <div class="container__full">
-        <app-layout-img-left></app-layout-img-left>
-        <app-layout-img-right></app-layout-img-right>
+        
+        <div class="container__layout container__layout__gray">
+            <div class="container__layout__text">
+                <h2>Flexible pricing for everyone</h2>
+                <p>Choose the best plan for your needs.</p>
+            </div>
+            <div class="container__layout__table">
+                <app-table></app-table>
+            </div>
+        </div>
+    
+        <div class="container__layout gap-space-700">
+            <div class="container__layout__text">
+                <h2>Contáctanos</h2>
+                <p>¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te responderemos lo más pronto posible.</p>
+            </div>
+            <div class="container__layout__form">
+                <div class="container__img">
+                    <img src="assets/img/form.png" alt="">
+                </div>
+                <app-form class="container__form"></app-form>
+            </div>
+        </div>
     </div>
     
-    <div class="container__layout">
-        <div class="container__layout__text">
-            <h2>Lorem ipsum dolor sit</h2>
-            <p>Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
-        </div>
-        <div class="container__layout__cards">
-            <app-card [imgUrl]="img1"></app-card>
-            <app-card [imgUrl]="img2"></app-card>
-            <app-card [imgUrl]="img3"></app-card>
-            <app-card [imgUrl]="img4"></app-card>
-            <app-card [imgUrl]="img5"></app-card>
-            <app-card [imgUrl]="img6"></app-card>
-            <app-card [imgUrl]="img7"></app-card>
-            <app-card [imgUrl]="img8"></app-card>
-        </div>
-    </div>
-    
-    <div class="container__layout container__layout__gray">
-        <div class="container__layout__text">
-            <h2>Flexible pricing for everyone</h2>
-            <p>Choose the best plan for your needs.</p>
-        </div>
-        <div class="container__layout__table">
-            <app-table></app-table>
-        </div>
-    </div>
+    <app-footer></app-footer>
+}
+@else{
+    <app-nav-mobile></app-nav-mobile>
+}
 
-    <div class="container__layout gap-space-700">
-        <div class="container__layout__text">
-            <h2>Contáctanos</h2>
-            <p>¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te responderemos lo más pronto posible.</p>
-        </div>
-        <div class="container__layout__form">
-            <div class="container__img">
-                <img src="assets/img/form.png" alt="">
-            </div>
-            <app-form class="container__form"></app-form>
-        </div>
-    </div>
-</div>
-
-<app-footer></app-footer>

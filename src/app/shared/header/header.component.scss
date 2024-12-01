@@ -20,6 +20,9 @@ header{
 @media (max-width: 768px) {
     header{
         padding: 0 $size-400;
+        img{
+            height: $size-300;
+        }
     }
 }
 
@@ -27,8 +30,5 @@ header{
 @media (max-width: 576px) {
     header{
         padding: 0 $size-300;
-        img{
-            height: $size-300;
-        }
     }
 }

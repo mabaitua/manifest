@@ -10,4 +10,5 @@ import { Component, Input } from '@angular/core';
 export class ButtonLgIconComponent {
   @Input() cssClassName: string="";
   @Input() imgUrl: string="";
+  @Input() buttonText: string="";
 }

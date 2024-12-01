@@ -48,7 +48,9 @@ h3{
 .text--bold{
     font-weight: map-get($font-weight,"800");
 }
-
+.w-100{
+    width: 100%;
+}
 // Móvil
 @media (max-width: 768px){
 
