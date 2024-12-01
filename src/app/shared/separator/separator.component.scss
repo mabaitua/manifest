@@ -1,0 +1,20 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+@import '../../../styles/variables';
+
+.separator {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .line {
+    flex-grow: 1;
+    height: 1px;
+    background-color: map-get($neutral,"white");
+  }
+  
+  .icon {
+    margin: 0 10px; 
+    font-size: $size-300; 
+  }
