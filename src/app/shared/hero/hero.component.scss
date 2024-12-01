@@ -32,7 +32,7 @@ section{
             .text--display{
                 font-size: map-get($font-size-desktop,"10");
                 font-weight: map-get($font-weight,"700");
-                line-height: map-get($line-height,"120");
+                line-height: 4.575rem;
             }
             hr{
                 width: 100%;
@@ -40,6 +40,7 @@ section{
             h1{
                 font-size: map-get($font-size-desktop,"7");
                 font-weight: map-get($font-weight,"700");
+                line-height: 2.713rem;
             }
         }
     }
@@ -95,10 +96,12 @@ section{
                 gap: $space-300;
                 .text--display{
                     font-size: map-get($font-size-mobile,"9");
+                    line-height: 2.4rem;
                 }
                 h1{
                     font-size: map-get($font-size-mobile,"7");
                     font-weight: map-get($font-weight,"400");
+                    line-height: 1.8rem;
                 }
             }
         }
