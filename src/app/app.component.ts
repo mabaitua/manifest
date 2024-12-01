@@ -3,11 +3,12 @@ import { RouterOutlet } from '@angular/router';
 import { CardComponent } from "./shared/card/card.component";
 import { LayoutImgLeftComponent } from "./shared/layout/layout-img-left/layout-img-left.component";
 import { LayoutImgRightComponent } from "./shared/layout/layout-img-right/layout-img-right.component";
+import { HeroComponent } from "./shared/hero/hero.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, LayoutImgRightComponent],
+  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, LayoutImgRightComponent, HeroComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })
