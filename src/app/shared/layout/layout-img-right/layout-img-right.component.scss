@@ -57,7 +57,7 @@
 @media (max-width: 768px){
     .container{
         flex-direction: column;
-        margin: 0 $space-400;
+        margin: 0;
         gap: $space-300;
         .container__imgRight{
             max-width: 100%;
@@ -71,12 +71,5 @@
             padding-right: 0;
             width: 100%;
         }
-    }
-}
-
-// Móvil
-@media (max-width: 576px){
-    .container{
-        margin: 0;
     }
 }

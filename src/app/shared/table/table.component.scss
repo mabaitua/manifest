@@ -1,0 +1,86 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+@import '../../../styles/variables';
+
+.container{
+    overflow-x: scroll;
+    table{
+        width: 100%;
+        border-collapse: collapse;
+        font-family: $manifestfontfamilyplus-jakarta-sans;
+        thead{
+            tr{
+                th{
+                    padding: $space-300;
+                    border-left: 1px solid map-get($neutral,"gray-200");
+                    width: 25%;
+                    p{
+                        font-family: $manifestfontfamilyplus-jakarta-sans;
+                        font-weight: map-get($font-weight,"700");
+                        text-align: center;
+                        display: flex;
+                        flex-direction: column;
+                        font-size: 17px;
+                        .price{
+                            font-size: 28px;
+                            line-height: map-get($line-height,"120");
+                        }
+                    }
+                    &.border-left-0{
+                        border-left: 0;
+                    }
+                    button{
+                        width: 100%;
+                        background-color: transparent;
+                        border: 1px solid map-get($neutral,"gray-200");
+                        color: map-get($neutral,"gray-800");
+                        font-family: $manifestfontfamilyopen-sans;
+                        text-align: center;
+                        text-underline-position: from-font;
+                        text-decoration-skip-ink: none;
+                        font-size: 15px;
+                        font-weight: map-get($font-weight,"400");
+                        line-height: 24px;
+                        opacity: $opacity-100;
+                        box-shadow: none;
+                        border-radius: $border-radius-100;
+                        padding: $space-50;
+                        display: flex;
+                        align-items: center;
+                        justify-content: center;
+                        cursor: pointer;
+                        margin-top:  $space-200;
+                    }
+                    .c-button--primary{
+                        background-color: map-get($amethyst, "400");
+                        color: map-get($neutral,"white");
+                        border: 0;
+                        &:active, &:hover{
+                            background-color: map-get($amethyst, "500");
+                        }
+                    }
+                }
+            }
+        }
+        tbody{
+            tr{
+                border-top: 1px solid map-get($neutral,"gray-200");
+                border-bottom: 1px solid map-get($neutral,"gray-200");
+                th{
+                    font-weight: map-get($font-weight,"400");
+                    font-size: map-get($font-size-desktop,"5");
+                    text-align: left;
+                    padding: $space-300 $space-400;
+                }
+                td{
+                    padding: $space-300 $space-400;
+                    text-align: center;
+                    border-left: 1px solid map-get($neutral,"gray-200");
+                    img{
+                        width: $size-400;
+                    }
+                }
+            }
+        }
+    }
+}

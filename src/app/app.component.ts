@@ -5,11 +5,12 @@ import { LayoutImgLeftComponent } from "./shared/layout/layout-img-left/layout-i
 import { LayoutImgRightComponent } from "./shared/layout/layout-img-right/layout-img-right.component";
 import { HeroComponent } from "./shared/hero/hero.component";
 import { FooterComponent } from "./shared/footer/footer.component";
+import { TableComponent } from "./shared/table/table.component";
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, LayoutImgRightComponent, HeroComponent, FooterComponent],
+  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, LayoutImgRightComponent, HeroComponent, FooterComponent, TableComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

@@ -12,9 +12,6 @@
         flex-direction: column;
         gap: $space-400;
         padding: $size-1000 18rem;
-        &.container__layout__gray{
-            background-color: map-get($layout,"layout");
-        }
         .container__layout__text{
             display: grid;
             gap: $space-200; 
@@ -47,6 +44,12 @@
             grid-template-columns: repeat(4, 1fr); 
             grid-template-rows: repeat(2, auto); 
             gap: $space-200; 
+        }
+        &.container__layout__gray{
+            background-color: map-get($layout,"layout");
+        }
+        .container__layout__table{
+            width: 100%;
         }
     }
 }
@@ -82,6 +85,7 @@
         .container__full{
             display: grid;
             gap: $space-400;
+            padding: 0 $space-400;
         }
         .container__layout{
             padding: $space-800 $space-400;
@@ -93,7 +97,9 @@
 @media (max-width: 576px){
     .container{
         width: auto;
-        padding: 0 $space-300;
+        .container__full{
+            padding: 0 $space-300;
+        }
         .container__layout{
             gap: $space-400;
             padding: $space-800 auto;
