@@ -11,9 +11,7 @@ import { NavService } from '../../../services/nav.service';
 export class NavComponent {
   private navService = inject(NavService)
   
-  showMobileMenu = false;
   changeNav(){
-    this.showMobileMenu = !this.showMobileMenu;
-    this.navService.updateNav(this.showMobileMenu);
+    this.navService.updateNav(false);
   }
 }

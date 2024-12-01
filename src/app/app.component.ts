@@ -7,13 +7,15 @@ import { HeroComponent } from "./shared/hero/hero.component";
 import { FooterComponent } from "./shared/footer/footer.component";
 import { TableComponent } from "./shared/table/table.component";
 import { FormComponent } from "./shared/form/form.component";
-import { NavMobileComponent } from './shared/header/nav-mobile/nav-mobile.component';
 import { NavService } from './services/nav.service';
+import { HeaderMobileComponent } from './shared/header-mobile/header-mobile.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, LayoutImgRightComponent, HeroComponent, FooterComponent, TableComponent, FormComponent, NavMobileComponent],
+  imports: [RouterOutlet, CardComponent, LayoutImgLeftComponent, 
+    LayoutImgRightComponent, HeroComponent, FooterComponent, 
+    TableComponent, FormComponent, HeaderMobileComponent],
   templateUrl: './app.component.html',
   styleUrl: './app.component.scss'
 })

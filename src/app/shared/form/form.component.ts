@@ -11,5 +11,6 @@ import { ButtonLgIconComponent } from "../buttons/button-lg-icon/button-lg-icon.
   styleUrl: './form.component.scss'
 })
 export class FormComponent {
-
+  iconSend='assets/img/icon-send.svg';
+  buttonText: string = "Enviar";
 }

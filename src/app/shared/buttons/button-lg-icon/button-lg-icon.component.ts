@@ -1,4 +1,4 @@
-import { Component, Input } from '@angular/core';
+import { Component, input, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button-lg-icon',
@@ -11,4 +11,8 @@ export class ButtonLgIconComponent {
   @Input() cssClassName: string="";
   @Input() imgUrl: string="";
   @Input() buttonText: string="";
+  @Input() showIcon = true;
+
+  
+
 }

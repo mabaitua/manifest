@@ -1,31 +1,36 @@
 <form action="">
-    <div class="container__2cols">
-        <div class="form-group">
-            <label class="form-label" for="">Nombre</label>
-            <app-input class="form-input"></app-input>
-        </div>
-        <div class="form-group">
-            <label class="form-label" for="">Apellidos</label>
-            <app-input class="form-input"></app-input>
-        </div>
+    <div class="form__container form__container--2cols">
+      <div class="form__group">
+        <label class="form__label" for="nombre">Nombre</label>
+        <app-input class="form__input"></app-input>
+      </div>
+      
+      <div class="form__group">
+        <label class="form__label" for="apellidos">Apellidos</label>
+        <app-input class="form__input"></app-input>
+      </div>
     </div>
-
-    <div class="form-group">
-        <label class="form-label" for="">Email</label>
-        <app-input class="form-input"></app-input>
+  
+    <div class="form__group">
+      <label class="form__label" for="email">Email</label>
+      <app-input class="form__input"></app-input>
     </div>
-
-    <div class="form-group">
-        <label class="form-label" for="">Mensaje</label>
-        <app-textarea class="form-textarea"></app-textarea>
+  
+    <div class="form__group">
+      <label class="form__label" for="mensaje">Mensaje</label>
+      <app-textarea class="form__textarea"></app-textarea>
     </div>
-
-    <div class="container__spaceBetween">
-        <div class="form-group checkbox">
-            <input type="checkbox">
-            <p>Acepto los <a aria-label="Ir a los términos y condiciones" href="#">Terminos y condiciones</a></p>
-        </div>
-        <app-button-lg-icon></app-button-lg-icon>
+  
+    <div class="form__container form__container--spaceBetween">
+      <div class="form__group form__group--checkbox">
+        <input type="checkbox" id="terms">
+        <label for="terms">Acepto los <a aria-label="Ir a los términos y condiciones" href="#">Términos y condiciones</a></label>
+      </div>
+      <app-button-lg-icon 
+        buttonText="Enviar" 
+        [showIcon]="false" 
+        [imgUrl]="iconSend" 
+        [cssClassName]="'c-button c-button--primary c-button--lg'">
+      </app-button-lg-icon>
     </div>
-
-</form>
+  </form>

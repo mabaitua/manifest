@@ -7,28 +7,28 @@ form{
     width: 100%;
     display: grid;
     gap: $space-300;
-    .form-group{
+    .form__group{
         display: flex;
         flex-direction: column;
         gap: $space-50;
-        .form-label{
+        .form__label{
             color: map-get($neutral,"black");
             font-size: map-get($font-size-desktop,"3");
         }
-        .form-input, .form-textarea{
+        .form__input, .form__textarea{
             border-radius: $border-radius-50;
             padding: $space-150;
             border: 0;
             box-shadow: 0;
             background-color: #254E7E17;
         }
-        .form-input{
+        .form__input{
             min-height: $size-500;
         }
-        .form-textarea{
+        .form__textarea{
             min-height: $size-1000;
         }
-        &.checkbox{
+        &.--checkbox{
             display: flex;
             flex-direction: row;
             input{
@@ -37,7 +37,7 @@ form{
                 margin-right: $space-100;
             }
             a{
-                color: map-get($neutral,"black");
+                color: map-get($neutral,"gray-800");
             }
         }
     }
