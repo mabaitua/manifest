@@ -11,7 +11,7 @@
     &:hover{
         text-decoration: underline;
     }
-    svg{
+    i{
         width: $size-200;
         fill: map-get($neutral,"white");
     }

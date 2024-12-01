@@ -3,9 +3,9 @@
 @import '../../../styles/variables';
 
 footer{
+    background-color: map-get($amethyst,"400");
+    padding: $space-800 18rem $space-400 18rem;
     .container{
-        background-color: map-get($amethyst,"400");
-        padding: $space-800 18rem $space-400 18rem;
         display: flex;
         flex-direction: column;
         gap: $space-200;
@@ -35,6 +35,63 @@ footer{
         .container__footer{
             display: flex;
             justify-content: space-between;
+            p{
+                font-size:  map-get($font-size-desktop,"3");
+            }
+            .container__footer__rrss{
+                display: flex;
+                gap: $space-200;
+                img{
+                    width: $size-300;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 1400px) {
+    footer{
+        padding: $space-800 $size-1000 $space-400 $size-1000;
+    }
+}
+
+@media (max-width: 1200px) {
+    footer{
+        .container{
+            .container__body{
+                grid-template-columns: repeat(1, 1fr); 
+            }
+        }
+    }
+}
+
+@media (max-width: 768px) {
+    footer{
+        padding: $space-800 $size-400 $space-400 $size-400;
+        .container{
+            .container__header{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+            }
+            .container__body{
+                .container__body__links{
+                    grid-template-columns: repeat(1, 1fr); 
+                }
+            }
+        }
+    }
+}
+
+// Móvil
+@media (max-width: 576px) {
+    footer{
+        padding: $space-800 $size-300 $space-400 $size-300;
+        .container{
+            .container__footer{
+                flex-direction: column;
+                gap: $space-200;
+            }
         }
     }
 }
