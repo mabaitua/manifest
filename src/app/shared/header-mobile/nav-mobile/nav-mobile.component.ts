@@ -9,9 +9,5 @@ import { NavService } from '../../../services/nav.service';
   styleUrl: './nav-mobile.component.scss'
 })
 export class NavMobileComponent {
-  private navService = inject(NavService)
-  
-  changeNav(){
-    this.navService.updateNav(true);
-  }
+
 }

@@ -1,5 +1,6 @@
-import { Component } from '@angular/core';
+import { Component, inject } from '@angular/core';
 import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
+import { NavService } from '../../services/nav.service';
 
 @Component({
   selector: 'app-header-mobile',
@@ -9,5 +10,9 @@ import { NavMobileComponent } from './nav-mobile/nav-mobile.component';
   styleUrl: './header-mobile.component.scss'
 })
 export class HeaderMobileComponent {
-
+  private navService = inject(NavService)
+  
+  changeNav(){
+    this.navService.updateNav(true);
+  }
 }
