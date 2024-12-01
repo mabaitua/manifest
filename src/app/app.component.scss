@@ -60,7 +60,6 @@
     }
 }
 
-//Tablet
 @media (max-width: 992px){
     .container{
         .container__layout{
@@ -77,6 +76,10 @@
 
 @media (max-width: 768px){
     .container{
+        .container__full{
+            display: grid;
+            gap: $space-400;
+        }
         .container__layout{
             margin: $space-800 $space-400;
         }
@@ -87,7 +90,7 @@
 @media (max-width: 576px){
     .container{
         width: auto;
-        padding: $space-300;;
+        padding: $space-300;
         .container__layout{
             gap: $space-400;
             margin: $space-800 auto;
