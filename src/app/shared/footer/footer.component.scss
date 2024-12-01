@@ -1,0 +1,24 @@
+@import '../../../styles/colors';
+@import '../../../styles/typography';
+@import '../../../styles/variables';
+
+footer{
+    .container{
+        background-color: map-get($amethyst,"400");
+        padding: $space-800 18rem $space-400 18rem;
+        display: flex;
+        flex-direction: column;
+        gap: $space-200;
+        p{
+            color: map-get($neutral,"white");
+        }
+        img{
+            height: $size-300;
+        }
+        .container__body{
+            display: grid;
+            gap: $space-300;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+    }
+}
