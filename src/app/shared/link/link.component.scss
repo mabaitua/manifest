@@ -8,7 +8,7 @@
     gap: $space-50;
     color: map-get($neutral,"white");
     text-decoration: none;
-    &:hover{
+    &:hover, &:active{
         text-decoration: underline;
     }
     i{
