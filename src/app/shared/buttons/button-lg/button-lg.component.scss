@@ -18,9 +18,13 @@
     border-width: $border-width-0;
     border-radius: $border-radius-100;
     display: flex;
+    gap: $space-100;
     align-items: center;
     justify-content: center;
     cursor: pointer;
+    img{
+        width: $size-300;
+    }
 }
 .c-button--lg{
     padding: $size-200;

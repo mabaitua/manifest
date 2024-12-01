@@ -25,7 +25,7 @@ footer{
                 grid-template-columns: repeat(3, 1fr); 
                 div{
                     display: grid;
-                    gap: $space-50;
+                    gap: $space-100;
                 }
             }
         }

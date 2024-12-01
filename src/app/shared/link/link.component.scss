@@ -11,8 +11,7 @@
     &:hover, &:active{
         text-decoration: underline;
     }
-    i{
+    img{
         width: $size-200;
-        fill: map-get($neutral,"white");
     }
 }
