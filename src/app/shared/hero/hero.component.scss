@@ -19,7 +19,7 @@ section{
             position: absolute;
             top: $space-500;
         }
-        .container__info{
+        .container__body{
             left: 0;
             right: 0;
             position: absolute;
@@ -48,7 +48,7 @@ section{
 @media (max-width: 1600px) {
     section{
         .container{
-            .container__info{
+            .container__body{
                 padding: 0 18rem $space-1600 18rem;
                 .text--display{
                     font-size: map-get($font-size-desktop,"9");
@@ -64,7 +64,7 @@ section{
 @media (max-width: 1400px) {
     section{
         .container{
-            .container__info{
+            .container__body{
                 padding: $size-1000;
             }
         }
@@ -74,7 +74,7 @@ section{
 @media (max-width: 1200px) {
     section{
         .container{
-            .container__info{
+            .container__body{
                 .text--display{
                     font-size: map-get($font-size-desktop,"8");
                 }
@@ -90,7 +90,7 @@ section{
     section{
         height: 704px;
         .container{
-            .container__info{
+            .container__body{
                 padding: 0 $size-400 $space-600 $size-400;
                 gap: $space-300;
                 .text--display{
@@ -110,7 +110,7 @@ section{
     section{
         height: 704px;
         .container{
-            .container__info{
+            .container__body{
                 padding: 0 $size-300 $space-600 $size-300;
             }
         }
