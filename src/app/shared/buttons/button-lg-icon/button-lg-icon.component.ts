@@ -11,8 +11,6 @@ export class ButtonLgIconComponent {
   @Input() cssClassName: string="";
   @Input() imgUrl: string="";
   @Input() buttonText: string="";
-  @Input() showIcon = true;
-
-  
-
+  @Input() showIconLeft = true;
+  @Input() showIconRight = true;
 }

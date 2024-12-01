@@ -1,7 +1,10 @@
 <button aria-label="call to action" [className]="cssClassName">
-    <img [src]="imgUrl" alt="">
+    @if(showIconLeft){
+        <img [src]="imgUrl" alt="">
+
+    }
     {{ buttonText }}
-    @if(showIcon){
+    @if(showIconRight){
         <img src="assets/img/icon-arrow-right.svg" alt="">
     }
 </button>

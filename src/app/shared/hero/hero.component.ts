@@ -12,5 +12,5 @@ import { ButtonLgIconComponent } from '../buttons/button-lg-icon/button-lg-icon.
   styleUrl: './hero.component.scss'
 })
 export class HeroComponent {
-
+  buttonText: string = "Descubre";
 }
