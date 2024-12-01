@@ -2,8 +2,19 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/variables';
 
-.chip--s{
-    padding: $space-50 $space-100;
-    font-size: map-get($font-size-desktop, "2");
-    line-height: 16px;
+.chip{
+    background-color: map-get($neutral, "gray-50");
+    color: map-get($neutral,"black");
+    border-radius: $border-radius-full;
+    font-weight: map-get($font-weight,"400");
+    opacity: $opacity-100;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    
+    &.chip--s{
+        padding: $space-50 $space-100;
+        font-size: map-get($font-size-desktop, "2");
+        line-height: 16px;
+    }
 }

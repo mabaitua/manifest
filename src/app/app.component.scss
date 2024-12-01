@@ -102,7 +102,7 @@
         }
         .container__layout{
             gap: $space-400;
-            padding: $space-800 auto;
+            padding: $space-800 $space-300;
             .container__layout__text{
                 width: 100%;
             }
