@@ -1,4 +1,4 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
 
 @Component({
   selector: 'app-button-lg-icon',
@@ -8,5 +8,6 @@ import { Component } from '@angular/core';
   styleUrl: './button-lg-icon.component.scss'
 })
 export class ButtonLgIconComponent {
-
+  @Input() cssClassName: string="";
+  @Input() imgUrl: string="";
 }
