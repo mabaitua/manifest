@@ -2,33 +2,52 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-header{
+.header {
     padding: 0 18rem;
     display: flex;
     justify-content: space-between;
-    img{
+    &__logo {
         height: $size-600;
+      &-image {
+        width: 100%;
+        height: 100%;
+      }
+    }
+}
+
+@media (max-width: 1600px) {
+    .header{
+        padding: 0 $space-2400;
     }
 }
 
 @media (max-width: 1400px) {
-    header{
-        padding: 0 $size-1000;
+    .header{
+        padding: 0 $space-1000;
     }
 }
 
-@media (max-width: 768px) {
-    header{
-        padding: 0 $size-400;
-        img{
-            height: $size-300;
+@media (max-width: 992px){
+    .header {
+        &__logo {
+            height: $size-500;
         }
+    }
+}
+
+
+@media (max-width: 768px){
+    .header {
+        padding: 0 $space-400;
     }
 }
 
 // Móvil
 @media (max-width: 576px) {
-    header{
-        padding: 0 $size-300;
+    .header {
+        padding: 0 $space-300;
+        &__logo {
+            height: $size-300;
+        }
     }
 }
