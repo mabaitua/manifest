@@ -2,42 +2,52 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/variables';
 
-nav{
+.navigation {
     display: flex;
     align-items: center;
     height: 100%;
-    .menu-toggle{
+    &__toggle {
         display: none;
+        border: 0;
+        background-color: transparent;
+        padding: 0;
+        cursor: pointer;
+        &-icon {
+            display: inline-block;
+            width: $size-300;
+            height: $size-300;
+        }
     }
-    ul{
+    &__list {
         display: flex;
         gap: $space-300;
         margin: 0 auto;
         padding: 0;
-        li{
-            list-style: none;
-            a{
-                color: map-get($neutral,"white");
-                text-decoration: none;
-                font-weight: map-get($font-weight,"600");
-            }
+    }
+    &__item {
+        list-style: none;
+    }
+    &__link {
+        color: map-get($neutral,"white");
+        text-decoration: none;
+        font-weight: map-get($font-weight,"600");
+        &:hover,
+        &:focus {
+            color: map-get($amethyst,"400");
+            text-decoration: underline;
         }
     }
+
 }
 
+
 @media (max-width: 768px) {
-    nav{
-        ul{
-            display: none;
-        }
-        .menu-toggle{
+    .navigation {
+        &__toggle {
             display: block;
-            border: 0;
-            background-color: transparent;
-            padding: 0;
-            img{
-                width: $size-300;
-            }
+        }
+        &__list {
+            display: none;
         }
     }
 }

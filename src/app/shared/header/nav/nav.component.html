@@ -1,11 +1,21 @@
-<nav>
-    <button class="menu-toggle" aria-label="Menú" (click)="changeNav()">
-        <img src="assets/img/icon-menu.svg" alt="">
+<nav class="navigation">
+    <button class="navigation__toggle" aria-label="Menú" (click)="changeNav()">
+      <span class="navigation__toggle-icon">
+        <img src="assets/img/icon-menu.svg" alt="Menú de navegación">
+      </span>
     </button>
-    <ul>
-        <li><a aria-label="Ir a inicio" href="#">Inicio</a></li>
-        <li><a aria-label="Ir a nosotros" href="#">Nosotros</a></li>
-        <li><a aria-label="Ir a viajes" href="#">Viajes</a></li>
-        <li><a aria-label="Ir a contacto" href="#">Contacto</a></li>
+    <ul class="navigation__list">
+      <li class="navigation__item">
+        <a class="navigation__link" aria-label="Ir a inicio" href="#">Inicio</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" aria-label="Ir a nosotros" href="#">Nosotros</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" aria-label="Ir a viajes" href="#">Viajes</a>
+      </li>
+      <li class="navigation__item">
+        <a class="navigation__link" aria-label="Ir a contacto" href="#">Contacto</a>
+      </li>
     </ul>
-</nav>
+  </nav>
