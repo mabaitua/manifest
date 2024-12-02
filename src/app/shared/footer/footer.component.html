@@ -1,28 +1,39 @@
-<footer>
-    <section class="container">
-        <div class="container__header">
-            <img aria-label="logo manifest" class="logo" src="assets/img/logo-manifest-white.svg">
+<footer class="footer">
+    <section class="footer__container">
+        <div class="footer__header">
+            <img 
+                aria-label="Logo Manifest" 
+                class="footer__logo" 
+                src="assets/img/logo-manifest-white.svg" 
+                alt="Logo Manifest"
+            />
         </div>
-        <div class="container__body">
-            <div>
-                <p>Cursus pretium a vel neque gravida eros mauris aliquam senectus. Cum volutpat arcu fames maecenas tortor ac. Suspendisse quis in duis curabitur sit sed porttitor a. Nec aliquet enim at enim tincidunt eget sed gravida. Egestas fermentum urna sed etiam aliquam.</p>
+
+        <div class="footer__body">
+            <div class="footer__body__description">
+                <p>
+                    Cursus pretium a vel neque gravida eros mauris aliquam senectus. Cum volutpat arcu fames maecenas tortor ac. 
+                    Suspendisse quis in duis curabitur sit sed porttitor a. Nec aliquet enim at enim tincidunt eget sed gravida. 
+                    Egestas fermentum urna sed etiam aliquam.
+                </p>
             </div>
-            <div class="container__body__links">
-                <div>
+
+            <div class="footer__body__links">
+                <div class="footer__body__links__column">
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                 </div>
-                <div>
+                <div class="footer__body__links__column">
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
                 </div>
-                <div>
+                <div class="footer__body__links__column">
                     <app-link></app-link>
                     <app-link></app-link>
                     <app-link></app-link>
@@ -31,15 +42,42 @@
                 </div>
             </div>
         </div>
-        <app-separator></app-separator>
-        <div class="container__footer">
-            <p>© 2024 Manifest</p>
-            <div class="container__footer__rrss">
-                <img aria-label="rrss 1" class="icon" src="assets/img/icon-rrss-1.svg">
-                <img aria-label="rrss 2" class="icon" src="assets/img/icon-rrss-2.svg">
-                <img aria-label="rrss 3" class="icon" src="assets/img/icon-rrss-3.svg">
-                <img aria-label="rrss 2" class="icon" src="assets/img/icon-rrss-2.svg">
-                <img aria-label="rrss 1" class="icon" src="assets/img/icon-rrss-1.svg">
+
+        <app-separator class="footer__separator"></app-separator>
+
+        <div class="footer__footer">
+            <p class="footer__copyright">© 2024 Manifest</p>
+            <div class="footer__social-media">
+                <img 
+                    aria-label="Redes sociales 1" 
+                    class="footer__social-media__icon" 
+                    src="assets/img/icon-rrss-1.svg" 
+                    alt="Red social 1"
+                />
+                <img 
+                    aria-label="Redes sociales 2" 
+                    class="footer__social-media__icon" 
+                    src="assets/img/icon-rrss-2.svg" 
+                    alt="Red social 2"
+                />
+                <img 
+                    aria-label="Redes sociales 3" 
+                    class="footer__social-media__icon" 
+                    src="assets/img/icon-rrss-3.svg" 
+                    alt="Red social 3"
+                />
+                <img 
+                    aria-label="Redes sociales 4" 
+                    class="footer__social-media__icon" 
+                    src="assets/img/icon-rrss-2.svg" 
+                    alt="Red social 4"
+                />
+                <img 
+                    aria-label="Redes sociales 5" 
+                    class="footer__social-media__icon" 
+                    src="assets/img/icon-rrss-1.svg" 
+                    alt="Red social 5"
+                />
             </div>
         </div>
     </section>

@@ -2,47 +2,52 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-footer{
+.footer {
     background-color: map-get($amethyst,"400");
     padding: $space-800 18rem $space-400 18rem;
-    .container{
+    &__container {
         display: flex;
         flex-direction: column;
         gap: $space-200;
-        p{
-            color: map-get($neutral,"white");
-        }
-        img{
+    }
+    &__header {
+        .footer__logo {
             height: $size-300;
         }
-        .container__body{
+    }
+    &__body {
+        display: grid;
+        gap: $space-300;
+        grid-template-columns: repeat(2, 1fr); 
+        &__description {
+           p{
+                color: map-get($neutral,"white");
+           }
+        }
+        &__links {
             display: grid;
             gap: $space-300;
-            grid-template-columns: repeat(2, 1fr); 
-            .container__body__links{
+            grid-template-columns: repeat(3, 1fr); 
+            &__column {
                 display: grid;
-                gap: $space-300;
-                grid-template-columns: repeat(3, 1fr); 
-                div{
-                    display: grid;
-                    gap: $space-100;
-                }
+                gap: $space-100;
             }
         }
-        hr{
-            width: 100%;
+    }
+    &__footer {
+        display: flex;
+        justify-content: space-between;
+        p {
+            color: map-get($neutral,"white");
+            font-size:  map-get($font-size-desktop,"3");
         }
-        .container__footer{
+        .footer__social-media {
             display: flex;
-            justify-content: space-between;
-            p{
-                font-size:  map-get($font-size-desktop,"3");
-            }
-            .container__footer__rrss{
-                display: flex;
-                gap: $space-200;
-                img{
-                    width: $size-300;
+            gap: $space-200;
+            .footer__social-media__icon {
+                width: $size-300;
+                &:hover {
+                    transform: scale(1.1);
                 }
             }
         }
@@ -50,34 +55,30 @@ footer{
 }
 
 @media (max-width: 1400px) {
-    footer{
+    .footer{
         padding: $space-800 $size-1000 $space-400 $size-1000;
     }
 }
 
 @media (max-width: 1200px) {
-    footer{
-        .container{
-            .container__body{
-                grid-template-columns: repeat(1, 1fr); 
-            }
+    .footer{
+        &__body{
+            grid-template-columns: repeat(1, 1fr); 
         }
     }
 }
 
 @media (max-width: 768px) {
-    footer{
+    .footer{
         padding: $space-800 $size-400 $space-400 $size-400;
-        .container{
-            .container__header{
-                width: 100%;
-                display: flex;
-                justify-content: center;
-            }
-            .container__body{
-                .container__body__links{
-                    grid-template-columns: repeat(1, 1fr); 
-                }
+        &__header{
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+        &__body{
+            &__links{
+                grid-template-columns: repeat(1, 1fr); 
             }
         }
     }
@@ -85,13 +86,11 @@ footer{
 
 // Móvil
 @media (max-width: 576px) {
-    footer{
+    .footer{
         padding: $space-800 $size-300 $space-400 $size-300;
-        .container{
-            .container__footer{
-                flex-direction: column;
-                gap: $space-200;
-            }
+        &__footer{
+            flex-direction: column;
+            gap: $space-200;
         }
     }
 }
