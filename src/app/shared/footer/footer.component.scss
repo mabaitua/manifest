@@ -54,6 +54,12 @@
     }
 }
 
+@media (max-width: 1600px) {
+    .footer{
+        padding: $space-800 $space-2400 $space-400 $space-2400;
+    }
+}
+
 @media (max-width: 1400px) {
     .footer{
         padding: $space-800 $size-1000 $space-400 $size-1000;
