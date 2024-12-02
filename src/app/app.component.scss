@@ -1,183 +1,199 @@
 @import '../styles/colors';
 @import '../styles/variables';
 
-//Desktop
-.container{
-    width: 100%;
-    margin: 0 auto;
-    .container__layout{
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
-        gap: $space-400;
-        padding: $size-1000 18rem;
-        .container__layout__text{
-            display: grid;
-            gap: $space-200; 
-            width: 660px;
-            h2, p{
-                text-align: center;
-            }
-        }
-        .container__layout__mosaic{
-            display: grid;
-            grid-template-rows: repeat(3, auto); 
-            gap: $space-300; 
-            .container__layout__column, .container__layout__2cols, .container__layout__3column{
-                height: 288px;
-                display: grid;
-                gap: $space-300;
-            }
-            .container__layout__2cols{
-                grid-template-columns: repeat(2, 1fr); 
-            }
-            .container__layout__3column{
-                grid-template-columns: repeat(3, 1fr); 
-            }
+//Layouts
+.layout{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    gap: $space-400;
+    padding: $size-1000 18rem;
+    &__text{
+        display: grid;
+        gap: $space-200; 
+        width: 660px;
+    }
+    &__title,  &__description{
+        text-align: center;
+    }
+    &__mosaic {
+        display: grid;
+        grid-template-rows: repeat(3, 1fr);
+        gap: 10px; 
+    }
+    &__cards{
+        display: grid;
+        grid-template-columns: repeat(4, 1fr); 
+        grid-template-rows: repeat(2, auto); 
+        gap: $space-200; 
+    }
+    &__table{
+        width: 100%;
+    }
+    &__form{
+        display: grid;
+        grid-template-columns:  repeat(2, 1fr); 
+        gap: $space-300;
+        width: 100%;
+        .form__image {
+            height: 496px;
+            width: 100%;
             img{
-                object-fit: cover;
                 width: 100%;
+                height: 100%;
                 border-radius: $border-radius-200;
-                height: 288px;
+                object-fit: cover;
             }
         }
-        .container__layout__cards{
-            display: grid;
-            grid-template-columns: repeat(4, 1fr); 
-            grid-template-rows: repeat(2, auto); 
-            gap: $space-200; 
+        .form__container {
+            display: flex;
+            align-items: center;
+            padding-left: $space-500;
         }
-        &.container__layout__gray{
-            background-color: map-get($layout,"layout");
-        }
-        .container__layout__table{
-            width: 100%;
-        }
-        .container__layout__form{
-            display: grid;
-            grid-template-columns:  repeat(2, 1fr); 
-            gap: $space-300;
-            width: 100%;
-            .container__img{
-                height: 496px;
-                width: 100%;
-                img{
-                    width: 100%;
-                    height: 100%;
-                    border-radius: $border-radius-200;
-                    object-fit: cover;
-                }
-            }
-            .container__form{
-                display: flex;
-                align-items: center;
-                padding-left: $space-500;
-            }
-        }
-        &.gap-space-700{
-            gap: $space-750;
+    }
+}
+
+//Mosaico
+.mosaic {
+    display: grid;
+    grid-template-rows: repeat(3, 1fr);
+    gap: $space-300; 
+    &__row {
+        display: grid;
+        gap: $space-300; 
+    }
+    &__row--full ,  &__row--half ,  &__row--third {
+        width: 100%;
+        height: 288px; 
+    }
+    &__row--full {
+        grid-template-columns: 1fr;
+    }
+    &__row--half {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    &__row--third {
+        grid-template-columns: repeat(3, 1fr);
+    }
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: cover; 
+        border-radius: $border-radius-200;
+    }
+}
+
+//Contenedores
+.container, .container__full{
+    margin: 0 auto;
+}
+
+//Modificadores
+.layout--gray {
+    background-color: map-get($layout,"layout");
+}
+.layout--gap-700 {
+    gap: $space-750;
+}
+
+//RESPONSIVE
+@media (max-width: 1400px){
+    .layout{
+        padding: $size-1000;
+        &__cards{
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(3, auto); 
         }
     }
 }
 
 @media (max-width: 1400px){
-    .container{
-        .container__layout{
-            padding: $size-1000;
-            .container__layout__cards{
-                grid-template-columns: repeat(3, 1fr); 
-                grid-template-rows: repeat(3, auto); 
-            }
+    .layout{
+        padding: $size-1000;
+        &__cards{
+            grid-template-columns: repeat(3, 1fr); 
+            grid-template-rows: repeat(3, auto); 
         }
     }
 }
 
 @media (max-width: 1200px){
-    .container{
-        .container__layout{
-            .container__layout__form{
-                .container__form{
-                    padding-left: 0;
-                }
-            }
+    .layout__form{
+        .form__container{
+            padding-left: 0;
         }
     }
 }
 
 @media (max-width: 992px){
-    .container{
-        .container__layout{
-            .container__layout__text{
-                width: 100%;
+    .layout{
+        &__text{
+            width: 100%;
+        }
+        &__cards{
+            grid-template-columns: repeat(2, 1fr); 
+            grid-template-rows: repeat(3, auto); 
+        }
+        &__form{
+            grid-template-columns: repeat(1, 1fr); 
+            .form__container{
+                height: 100%;
             }
-            .container__layout__cards{
-                grid-template-columns: repeat(2, 1fr); 
-                grid-template-rows: repeat(3, auto); 
-            }
-            .container__layout__form{
-                grid-template-columns: repeat(1, 1fr); 
-                .container__img{
-                    height: 234px;
-                }
+            .form__image{
+                height: 234px;
             }
         }
     }
 }
 
 @media (max-width: 768px){
-    .container{
-        .container__full{
-            display: grid;
-            gap: $space-400;
-            padding: 0 $space-400;
-        }
-        .container__layout{
-            padding: $space-800 $space-400;
-            .container__layout__text{
-                h2, p{
-                    text-align: left;
-                }
-            }
+    .container__full{
+        display: grid;
+        gap: $space-400;
+        padding: 0 $space-400;
+    }
+    .layout{
+        padding: $space-800 $space-400;
+        &__title,  &__description{
+            text-align: left;
         }
     }
 }
 
 // Móvil
 @media (max-width: 576px){
-    .container{
-        width: auto;
-        .container__full{
-            padding: 0 $space-300;
+    .container__full{
+        padding: 0 $space-300;
+    }
+    .layout{
+        gap: $space-400;
+        padding: $space-800 $space-300;
+        &__text{
+            width: 100%;
         }
-        .container__layout{
-            gap: $space-400;
-            padding: $space-800 $space-300;
-            .container__layout__text{
-                width: 100%;
+        .mosaic{
+            grid-template-rows: none;
+            gap: $space-300;
+            &__row--full, &__row--half, &__row--third{
+                height: 100%;
             }
-            .container__layout__mosaic{
-                gap: 0;
-                display: block;
-                .container__layout__column, .container__layout__2cols, .container__layout__3column{
-                    height: 288px;
-                    display: grid;
-                }
-                .container__layout__2cols{
-                    width: 100%;
-                    grid-template-columns: repeat(1, 1fr);
-                    height: 100%;
-                    margin-top: $space-300;
-                }
-                .container__layout__3column{
-                    display: none;
-                }
+            &__row--half{
+               gap: $space-300;
+               grid-template-columns: repeat(1, 1fr);
             }
-            .container__layout__cards{
-                grid-template-columns: repeat(1, 1fr); 
-                grid-template-rows: repeat(1, auto); 
-                gap: $space-300; 
+            &__row--third{
+                display: none;
             }
+            &__image{
+                height: 300px;
+            }
+        }
+        &__cards{
+            grid-template-columns: repeat(1, 1fr); 
+            grid-template-rows: repeat(1, auto); 
+            gap: $space-300; 
         }
     }
 }
+
