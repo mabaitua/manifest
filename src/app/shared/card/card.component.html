@@ -1,26 +1,36 @@
 <article class="card">
-    <section class="card__imgHolder">
-        <app-chip-icon class="card__imgHolder__chip"></app-chip-icon>
-        <img [src]="imgUrl" class="card__imgHolder__img" alt="imagen card">
-    </section>
-    <section class="card__content">
-        <div class="card__content__description">
-            <div class="card__content__chips">
-                <app-chip-s></app-chip-s>
-                <app-chip-s></app-chip-s>
-                <app-chip-s></app-chip-s>
+    <header class="card__header">
+        <div class="card__header__chip">
+            <app-chip-icon></app-chip-icon>
+        </div>
+        <figure class="card__header__image">
+            <img [src]="imgUrl" alt="Imagen descriptiva del card">
+        </figure>
+    </header>
+
+    <section class="card__body">
+        <div class="card__body__description">
+            <div class="card__body__chips">
+                <app-chip-s class="card__chip"></app-chip-s>
+                <app-chip-s class="card__chip"></app-chip-s>
+                <app-chip-s class="card__chip"></app-chip-s>
             </div>
-            <p class="text--sm">10/05/2022</p>
-            <h3>Sed donec blandit amet fames morbi donec tincidunt.</h3>
-            <p class="text--md">Velit non id lacus eros montes. Arcu quis facilisis ut sed tempor vitae non adipiscing. Quam quis arcu ac in vulputate diam at tellus urna.</p>
-            <div class="card__content__price">
-                <p>Desde</p>
-                <h3>2.031€</h3>
-            </div>
-            <div class="card__content__buttons">
-                <app-button-md [cssClassName]="'c-button c-button--sm'"></app-button-md>
-                <app-button-md [cssClassName]="'c-button c-button--primary c-button--sm'" ></app-button-md>
+
+            <time class="card__body__date">10/05/2022</time>
+            <h3 class="card__body__title">Sed donec blandit amet fames morbi donec tincidunt.</h3>
+            <p class="card__body__text">Velit non id lacus eros montes. Arcu quis facilisis ut sed tempor vitae non adipiscing. Quam quis arcu ac in vulputate diam at tellus urna.</p>
+            
+            <div class="card__body__price">
+                <p class="card__body__price-label">Desde</p>
+                <h3 class="ard__body__price-value">2.031€</h3>
             </div>
         </div>
     </section>
+
+    <footer class="card__footer">
+        <div class="card__footer__buttons">
+            <app-button-md [cssClassName]="'c-button c-button--md'"></app-button-md>
+            <app-button-md [cssClassName]="'c-button c-button--primary c-button--md'" ></app-button-md>
+        </div>
+    </footer>
 </article>

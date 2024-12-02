@@ -2,63 +2,65 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-
-// Desktop
 .card{
     background-color: map-get($neutral,"white");
     box-shadow: 0px 10px 40px 0px #0000001A;
-    .card__imgHolder{
+    &__header{
         position: relative;
         width: 100%;
         height: 238.5px;
-        .card__imgHolder__img{
-            object-fit: cover;
-            width: 100%;
-            height: 100%;
-        }
-        .card__imgHolder__chip{
+        &__chip{
             position: absolute;
             right: $space-200;
             top: $space-200;
         }
+        &__image{
+            margin: 0;
+            height: 100%;
+            img{
+                object-fit: cover;
+                width: 100%;
+                height: 100%;
+            }
+
+        }
     }
-   .card__content{
-        .card__content__description{
-            padding: $space-200;
+    &__body{
+        padding: $space-200;
+        &__description{
             gap: $space-200;
             display: grid;
             opacity: $opacity-100;
-            .text--sm{
-                font-size: map-get($font-size-desktop, "2");
-            }
-            .text--md{
+        }
+        &__chips{
+            display: flex;
+            gap: 8px;
+        }
+        &__date {
+            font-size: map-get($font-size-desktop, "2");
+        }
+        &__price{
+            display: flex;
+            justify-content: space-between;
+            &-label{
                 font-size: map-get($font-size-desktop, "3");
                 line-height: 1.225rem;
             }
-            .card__content__chips{
-                display: flex;
-                gap: 8px;
-            }
-            .card__content__price{
-                display: flex;
-                justify-content: space-between;
-            }
-            .card__content__buttons{
-                display: flex;
-                width: 100%;
-                height: 100%;
-                gap: $space-200;
-                button{
-                    width: 100%;
-                }
-            }
         }
-   }
+    }
+    &__footer{
+        padding: 0 $space-200 $space-200 ;
+        gap: $space-200;
+        &__buttons{
+            display: flex;
+            gap: $space-200;
+        }
+    }
 }
 
 @media (max-width: 1400px){
     .card{
-        .card__imgHolder{
+        &__header{
             height: 200px;
         }
     }
@@ -68,7 +70,7 @@
 @media (max-width: 576px){
     .card{
         max-width: 100%;
-        .card__imgHolder{
+        &__header{
             height: 234px;
         }
     }
