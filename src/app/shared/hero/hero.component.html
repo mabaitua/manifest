@@ -1,13 +1,13 @@
-<section>
-    <div class="container">
-        <div class="container__header">
-            <app-header></app-header>
-        </div>
-        <div class="container__body">
-            <p class="text--white text--center text--display">Explora el mundo: Tu guía de viajes perfecta</p>
-            <app-separator class="w-100"></app-separator>
-            <h1 class="text--white text--center">Explora destinos increíbles y vive aventuras inolvidables.</h1>
-            <p class="text--white text--center">Ofrecemos una amplia gama de destinos, desde playas paradisíacas hasta montañas majestuosas, para que encuentres el lugar perfecto para tu próxima escapada.</p>
+<section class="hero">
+    <div class="hero__container">
+        <header class="hero__header">
+            <app-header class="hero__header__component"></app-header>
+        </header>
+        <div class="hero__body">
+            <p class="hero__body__text hero__body__text--display">Explora el mundo: Tu guía de viajes perfecta</p>
+            <app-separator class="hero__body__separator"></app-separator>
+            <h1 class="hero__body__title">Explora destinos increíbles y vive aventuras inolvidables.</h1>
+            <p class="hero__body__text">Ofrecemos una amplia gama de destinos, desde playas paradisíacas hasta montañas majestuosas, para que encuentres el lugar perfecto para tu próxima escapada.</p>
             <app-button-lg-icon [showIconLeft]="false" [showIconRight]="true"  buttonText="Descubre" [cssClassName]="'c-button  c-button--primary c-button--lg'"></app-button-lg-icon>
         </div>
     </div>

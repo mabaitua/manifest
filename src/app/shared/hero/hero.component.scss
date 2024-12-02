@@ -2,106 +2,105 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-section{
+.hero{
     height: 768px;
     background: url("../../../assets/img/hero.png");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: 50%;
     position: relative;
-    .container{
+    &__container{
         background-color: map-get($neutral,"transparent-black-50");
         height: 100%;
         width: 100%;
-        .container__header{
-            left: 0;
-            right: 0;
-            position: absolute;
-            top: $space-500;
+        left: 0;
+        right: 0;
+        position: absolute;
+    }
+    &__header{
+        left: 0;
+        right: 0;
+        position: absolute;
+        top: $space-500;
+    }
+    &__body{
+        position: absolute;
+        left: 0;
+        right: 0;
+        bottom: $space-500;
+        gap:  $space-300;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding: 0 18rem $space-1800;
+        &__text,  &__text--display,  &__title{
+            color: map-get($neutral,"white");
+            text-align: center;
         }
-        .container__body{
-            left: 0;
-            right: 0;
-            position: absolute;
-            bottom: $space-500;
-            padding: 0 18rem $space-2000 18rem;
-            display: flex;
-            flex-direction: column;
-            align-items: center;
-            gap: $space-400;
-            .text--display{
-                font-size: map-get($font-size-desktop,"10");
-                font-weight: map-get($font-weight,"700");
-                line-height: map-get($line-height,"120");
-            }
-            hr{
-                width: 100%;
-            }
-            h1{
-                font-size: map-get($font-size-desktop,"7");
-                font-weight: map-get($font-weight,"700");
-                line-height: map-get($line-height,"120");
-            }
+        &__text--display{
+            font-size: map-get($font-size-desktop,"10");
+            font-weight: map-get($font-weight,"700");
+            line-height: map-get($line-height,"120");
+        }
+        &__separator{
+            width: 100%;
+        }
+        &__title{
+            font-size: map-get($font-size-desktop,"7");
+            font-weight: map-get($font-weight,"700");
+            line-height: map-get($line-height,"120");
         }
     }
 }
 
 @media (max-width: 1600px) {
-    section{
-        .container{
-            .container__body{
-                padding: 0 18rem $space-1600 18rem;
-                .text--display{
-                    font-size: map-get($font-size-desktop,"9");
-                }
-                h1{
-                    font-size: map-get($font-size-desktop,"6");
-                }
+    .hero{
+        &__body{
+            padding: 0 $space-2400 $space-1600 $space-2400;
+            &__text--display{
+                font-size: map-get($font-size-desktop,"9");
+            }
+            &__title{
+                font-size: map-get($font-size-desktop,"6");
             }
         }
     }
 }
 
 @media (max-width: 1400px) {
-    section{
-        .container{
-            .container__body{
-                padding: $size-1000;
-            }
+    .hero{
+        &__body{
+            padding: $size-1000;
         }
     }
 }
 
 @media (max-width: 1200px) {
-    section{
-        .container{
-            .container__body{
-                .text--display{
-                    font-size: map-get($font-size-desktop,"8");
-                }
-                h1{
-                    font-size: map-get($font-size-desktop,"5");
-                }
+    .hero{
+        &__body{
+            &__text--display{
+                font-size: map-get($font-size-desktop,"8");
+            }
+            &__title{
+                font-size: map-get($font-size-desktop,"5");
             }
         }
     }
 }
 
 @media (max-width: 768px) {
-    section{
+    .hero{
         height: 704px;
-        .container{
-            .container__body{
-                padding: 0 $size-400 $space-600 $size-400;
-                gap: $space-300;
-                bottom: 0;
-                .text--display{
-                    font-size: map-get($font-size-mobile,"9");
-                }
-                h1{
-                    font-size: map-get($font-size-mobile,"7");
-                    font-weight: map-get($font-weight,"400");
-                }
+        &__body{
+            padding: 0 $size-400 $space-600 $size-400;
+            gap: $space-300;
+            bottom: 0;
+            &__text--display{
+                font-size: map-get($font-size-mobile,"9");
+            }
+            &__title{
+                font-size: map-get($font-size-mobile,"7");
+                font-weight: map-get($font-weight,"400");
             }
         }
     }
@@ -109,12 +108,13 @@ section{
 
 // Móvil
 @media (max-width: 576px) {
-    section{
+    .hero{
         height: 704px;
-        .container{
-            .container__body{
-                padding: 0 $size-300 $space-600 $size-300;
-            }
+        &__body{
+            padding: 0 $size-300 $space-600 $size-300;
+        }
+        &__header{
+            top: $space-300;
         }
     }
 }
