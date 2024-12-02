@@ -2,7 +2,7 @@
 @import '../../../../styles/typography';
 @import '../../../../styles/variables';
 
-// Botones
+// Button Lg
 .c-button{
     background-color: map-get($neutral, "gray-50");
     color: map-get($neutral,"black");
@@ -25,14 +25,14 @@
     img{
         width: $size-300;
     }
-}
-.c-button--lg{
-    padding: $size-200;
-}
-.c-button--primary{
-    background-color: map-get($amethyst, "400");
-    color: map-get($neutral,"white");
-    &:active, &:hover{
-        background-color: map-get($amethyst, "500");
+    &--lg{
+        padding: $size-200;
+    }
+    &--primary{
+        background-color: map-get($amethyst, "400");
+        color: map-get($neutral,"white");
+        &:active, &:hover{
+            background-color: map-get($amethyst, "500");
+        }
     }
 }
