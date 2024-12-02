@@ -2,16 +2,16 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-header{
+.header{
     padding: $space-300;;
     display: flex;
     flex-direction: column;
     gap: $space-500;
-    .container {
+    &__container {
         display: flex;
         justify-content: space-between;
     }
-    .menu-toggle{
+    &__menu-toggle{
         padding: 0;
         border: 0;
         background-color: transparent;
