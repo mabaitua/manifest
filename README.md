@@ -1,27 +1,85 @@
-# Manifest
+# Manifest 
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.1.
+## Dependencias necesarias:
 
-## Development server
+Angular 17.2.1.
+Node 20.11.1
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+## Estructura del Proyecto
 
-## Code scaffolding
+/manifest
+│
+├── /src                    # Contiene los archivos fuente de la aplicación
+│   ├── /app                # Componentes y servicios de la aplicación
+│   │   ├── /services 	     # Servicio para hacer funcionar el menú móvil
+│   │   ├── /shared 
+│ 	    	  ├── /buttons                # Componentes button
+│ 	    	  ├── /card                   # Componente card
+│ 	    	  ├── /chips                  # Componentes chips
+│ 	    	  ├── /footer                 # Componente footer
+│ 	    	  ├── /form                   # Componente formulario
+│ 	    	       ├── /input             # Componente input
+│ 	    	       ├── /textarea          # Componente textarea
+│ 	    	  ├── /header                 # Componente header desktop
+│ 	    	       ├── /nav               # Componente nav desktop
+│ 	    	  ├── /headerMobile           # Componente header desktop
+│ 	    	       ├── /navMobile         # Componente nav mobile
+│ 	    	  ├── /hero                   # Componente de la cabecera de inicio
+│ 	    	  ├── /layout                 # Componentes layout para imágenes y textos
+│ 	    	       ├── /layoutImgLeft     # Componente nav mobile
+│ 	    	       ├── /layoutImg Right   # Componente nav mobile
+│ 	    	  ├── /link                   # Componente link
+│ 	    	  ├── /separator              # Componente separador
+│ 	    	  ├── /table                  # Componente table
+│   ├── /assets                           # Archivos estáticos (imágenes, iconos, etc.)
+│   ├── /styles     		               # Archivos globales de estilos SCSS
+│ 	    	  ├── /_colors.scss           # Estilos scss de colores
+│ 	    	  ├── /_typograpfy.scss       # Estilos scss relacionados con la tipografía
+│ 	    	  ├── /_variables.scss        # Estilos scss para otras variables
+│   └── index.html          # HTML principal de la aplicación
+│
+├── /node_modules           # Dependencias del proyecto (generadas por npm)
+├── angular.json            # Configuración principal de Angular
+├── package.json            # Gestión de dependencias y scripts del proyecto
+├── README.md               # Este archivo de documentación
+└── tsconfig.json  
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+1. Página de inicio: Toda la pagina de inicio está en el componente "app"
 
-## Build
+2. Buttons: Dos componentes diferentes dependiendo del tamaño y los iconos. Para estilarlos se les pasa unas variables.
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+3. Cards: Tiene en su interior otros componentes de (chips) y (buttons).
 
-## Running unit tests
+4. Chips: Dos componentes diferentes según el tamaño e icono para mostrar información diferente.
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+5. Footer: Muestra la información de contacto, enlaces rápidos y redes sociales.
 
-## Running end-to-end tests
+6. Form: Es el formulario de contacto. En este componente hay varios componentes adicionales como inputs, textarea y botones.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+7. Header: Contiene el logotipo, menú de navegación (componente nav). Hay dos componentes diferentes para diferente tamaño de dispositivo.
 
-## Further help
+8. Hero: Se trata de la cabecera general de la página. Dentro de este componente hay otros componentes: header, nav, separator y button.
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+9. Layout: Son dos compoenetes de layout con width:100% con imagen a un lado y al otro texto.
+
+10. Link: Es un componente creado independientemente y está metido dentro del (footer). 
+
+11. Separador: Es un componente creado independientemente y está metido dentro del (footer y hero). 
+
+12. Table: Componente para estilar la tabla de precios
+_________________________________________________________________________________
+
+## Instrucciones para Levantar y Ejecutar el Proyecto
+
+### 1. Clonar el repositorio en tu máquina local:
+
+git clone https://github.com/tu-usuario/manifest.git
+
+### 2. Instalar las dependencias:
+
+cd manifest
+npm install
+
+### 3. Levantar el Servidor de Desarrollo:
+
+ng serve
