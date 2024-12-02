@@ -3,63 +3,81 @@
 @import '../../../styles/typography';
 @import '../../../styles/variables';
 
-form{
+.form{
     width: 100%;
-    display: grid;
-    gap: $space-300;
-    .form__group{
+    &__fieldset {
+        border: none;
+        padding: 0;
+        margin: 0;
+        display: grid;
+        gap: $space-300;
+    }
+    &__legend {
+        display: none;
+    }
+    &__group {
+        display: flex;
+        gap: $space-50;
+        &--2cols {
+            display: grid;
+            gap: $space-300;
+            grid-template-columns: repeat(2, 1fr); 
+        }
+        &--space-between {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
+    &__field {
         display: flex;
         flex-direction: column;
+        width: 100%;
         gap: $space-50;
-        .form__label{
-            color: map-get($neutral,"black");
-            font-size: map-get($font-size-desktop,"3");
-        }
-        .form__input, .form__textarea{
-            border-radius: $border-radius-50;
-            padding: $space-150;
-            border: 0;
-            box-shadow: 0;
-            background-color: #254E7E17;
-        }
-        .form__input{
-            min-height: $size-500;
-        }
-        .form__textarea{
-            min-height: $size-1000;
-        }
-        &.--checkbox{
-            display: flex;
+        &--checkbox {
             flex-direction: row;
+            align-items: center;
+            gap: $space-100;
             input{
                 width: $size-250;
                 height: $size-250;
-                margin-right: $space-100;
-            }
-            a{
-                color: map-get($neutral,"gray-800");
             }
         }
     }
-    .container__2cols{
-        display: grid;
-        gap: $space-300;
-        grid-template-columns: repeat(2, 1fr); 
+    &__label {
+        color: map-get($neutral,"black");
+        font-size: map-get($font-size-desktop,"3");
     }
-    .container__spaceBetween{
-        display: flex;
-        justify-content: space-between;
+    &__input,
+    &__textarea {
+        border-radius: $border-radius-50;
+        padding: $space-150;
+        border: 0;
+        box-shadow: 0;
+        background-color: #254E7E17;
+        height: $size-400;
+        &:focus {
+        outline: none;
+        }
+    }
+    &__textarea {
+        resize: vertical;
+        height: $size-700;
+    }
+    a{
+        color: map-get($neutral,"gray-800");
     }
 }
 
-@media (max-width: 1200px){
-    form{
-        .container__2cols{
-            grid-template-columns: repeat(1, 1fr); 
-        }
-        .container__spaceBetween{
-            flex-direction: column;
-            gap: $space-200;
+@media (max-width: 768px) {
+    .form{
+        &__group {
+            &--2cols {
+                grid-template-columns: repeat(1, 1fr); 
+            }
+            &--space-between {
+                flex-direction: column;
+                gap: $size-500;
+            }
         }
     }
 }
