@@ -21,14 +21,14 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-}
-.c-button--sm{
-    padding: $size-100 $size-200;
-}
-.c-button--primary{
-    background-color: map-get($amethyst, "400");
-    color: map-get($neutral,"white");
-    &:active, &:hover{
-        background-color: map-get($amethyst, "500");
+    &--md{
+        padding: $size-100 $size-200;
+    }
+    &--primary{
+        background-color: map-get($amethyst, "400");
+        color: map-get($neutral,"white");
+        &:active, &:hover{
+            background-color: map-get($amethyst, "500");
+        }
     }
 }
