@@ -22,11 +22,14 @@
                 width: 100%;
                 height: 100%;
             }
-
         }
     }
     &__body{
         padding: $space-200;
+        &__text{
+            font-size: map-get($font-size-desktop, "3");
+            line-height: 1.225rem;
+        }
         &__description{
             gap: $space-200;
             display: grid;
@@ -42,10 +45,6 @@
         &__price{
             display: flex;
             justify-content: space-between;
-            &-label{
-                font-size: map-get($font-size-desktop, "3");
-                line-height: 1.225rem;
-            }
         }
     }
     &__footer{
