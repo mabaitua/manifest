@@ -2,33 +2,20 @@
     <app-hero></app-hero>
 
     <div class="container">
-        <div class="layout">
+        <section class="layout">
             <div class="layout__text">
                 <h2 class="layout__title">Los mejores destinos </h2>
                 <p class="layout__description">Explora los mejores destinos del mundo, desde las playas paradisíacas de Maldivas hasta las montañas majestuosas de los Alpes. Cada lugar ofrece una experiencia única.</p>
             </div>
-            <div class="mosaic">
-                <div class="mosaic__row mosaic__row--full">
-                    <img class="mosaic__image" src="assets/img/mosaico-1.png" alt="Imagen 1">
-                </div>
-                <div class="mosaic__row mosaic__row--half">
-                    <img class="mosaic__image" src="assets/img/mosaico-2.png" alt="Imagen 2">
-                    <img class="mosaic__image" src="assets/img/mosaico-3.png" alt="Imagen 3">
-                </div>
-                <div class="mosaic__row mosaic__row--third">
-                    <img class="mosaic__image" src="assets/img/mosaico-4.png" alt="Imagen 4">
-                    <img class="mosaic__image" src="assets/img/mosaico-5.png" alt="Imagen 5">
-                    <img class="mosaic__image" src="assets/img/mosaico-6.png" alt="Imagen 6">
-                </div>
-            </div>
-        </div>
+            <app-mosaic></app-mosaic>
+        </section>
     
-        <div class="container__full">
+        <section class="container__full">
             <app-layout-img-left></app-layout-img-left>
             <app-layout-img-right></app-layout-img-right>
-        </div>
+        </section>
         
-        <div class="layout">
+        <section class="layout">
             <div class="layout__text">
                 <h2 class="layout__title">Lorem ipsum dolor sit</h2>
                 <p class="layout__description">Forem ipsum dolor sit amet, consectetur adipiscing elit. Nunc vulputate libero et velit interdum, ac aliquet odio mattis.</p>
@@ -43,9 +30,9 @@
                 <app-card class="cards__item" [imgUrl]="img7"></app-card>
                 <app-card class="cards__item" [imgUrl]="img8"></app-card>
             </div>
-        </div>
+        </section>
         
-        <div class="layout layout--gray">
+        <section class="layout layout--gray">
             <div class="layout__text">
                 <h2 class="layout__title">Flexible pricing for everyone</h2>
                 <p class="layout__description">Choose the best plan for your needs.</p>
@@ -53,9 +40,9 @@
             <div class="layout__table">
                 <app-table></app-table>
             </div>
-        </div>
+        </section>
     
-        <div class="layout layout--gap-700">
+        <section class="layout layout--gap-700">
             <div class="layout__text">
                 <h2 class="layout__title">Contáctanos</h2>
                 <p class="layout__description">¡Contáctanos! Estamos aquí para ayudarte con cualquier consulta que tengas. No dudes en escribirnos y te responderemos lo más pronto posible.</p>
@@ -66,7 +53,7 @@
                 </div>
                 <app-form class="form__container"></app-form>
             </div>
-        </div>
+        </section>
     </div>
     
     <app-footer></app-footer>

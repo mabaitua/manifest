@@ -20,14 +20,15 @@ Node 20.11.1
 │ 	    	  ├── /form                   # Componente formulario
 │ 	    	       ├── /input             # Componente input
 │ 	    	       ├── /textarea          # Componente textarea
-│ 	    	  ├── /header                 # Componente header desktop
-│ 	    	       ├── /nav               # Componente nav desktop
-│ 	    	  ├── /headerMobile           # Componente header desktop
-│ 	    	       ├── /navMobile         # Componente nav mobile
+│ 	    	  ├── /header                 # Componente logo y navegación desktop
+│ 	    	       ├── /nav               # Componente navegación desktop
+│ 	    	  ├── /headerMobile           # Componente logo y navegación desktop
+│ 	    	       ├── /navMobile         # Componente navegación móvil
 │ 	    	  ├── /hero                   # Componente de la cabecera de inicio
 │ 	    	  ├── /layout                 # Componentes layout para imágenes y textos
-│ 	    	       ├── /layoutImgLeft     # Componente nav mobile
-│ 	    	       ├── /layoutImg Right   # Componente nav mobile
+│ 	    	       ├── /layoutImgLeft     # Componente layout de texto derecha e imagen izquierda
+│ 	    	       ├── /layoutImg Right   # Componente layout de texto izquierda e imagen derecha
+│ 	    	       ├── /mosaic            # Componente mosaico de imágenes
 │ 	    	  ├── /link                   # Componente link
 │ 	    	  ├── /separator              # Componente separador
 │ 	    	  ├── /table                  # Componente table
@@ -60,7 +61,7 @@ Node 20.11.1
 
 8. Hero: Se trata de la cabecera general de la página. Dentro de este componente hay otros componentes: header, nav, separator y button.
 
-9. Layout: Son dos compoenetes de layout con width:100% con imagen a un lado y al otro texto.
+9. Layout: Son tres coomponentes, dos de ellos tienen width:100% de ancho de pägina (layourImgLeft y layourImgRight). El componente mosaico para mostrar imagenes en diferentes tamaños.
 
 10. Link: Es un componente creado independientemente y está metido dentro del (footer). 
 
